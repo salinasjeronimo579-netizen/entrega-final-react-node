@@ -1,7 +1,9 @@
-export function LayoutLogin({ children }) {
+export function LayoutLogin({ children, maxWidth = 'max-w-sm' }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-6 py-12">
-      <div className="flex w-full max-w-sm flex-col items-center gap-6 rounded-2xl border border-border bg-surface p-8">
+      <div
+        className={`flex w-full ${maxWidth} flex-col items-center gap-6 rounded-2xl border border-border bg-surface p-8`}
+      >
         <div className="flex items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
