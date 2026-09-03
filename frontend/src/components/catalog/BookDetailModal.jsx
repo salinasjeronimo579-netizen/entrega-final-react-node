@@ -1,4 +1,9 @@
+import { useState } from 'react'
+import LoginPromptModal from './LoginPromptModal.jsx'
+
 export function BookDetailModal({ book, onClose }) {
+  const [isLoginPromptOpen, setIsLoginPromptOpen] = useState(false)
+
   if (!book) {
     return null
   }
@@ -57,12 +62,17 @@ export function BookDetailModal({ book, onClose }) {
 
           <button
             type="button"
+            onClick={() => setIsLoginPromptOpen(true)}
             className="mt-6 w-full cursor-pointer rounded-full bg-foreground py-2 text-sm font-semibold text-background transition-colors duration-200 hover:opacity-90 sm:ml-auto sm:w-auto sm:px-8"
           >
             Añadir a lista de préstamos
           </button>
         </div>
       </div>
+
+      {isLoginPromptOpen && (
+        <LoginPromptModal onClose={() => setIsLoginPromptOpen(false)} />
+      )}
     </div>
   )
 }

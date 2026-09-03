@@ -63,6 +63,7 @@ export function Catalog() {
       </section>
 
       <BookDetailModal
+        key={selectedBook?.id ?? 'closed'}
         book={selectedBook}
         onClose={() => setSelectedBook(null)}
       />
