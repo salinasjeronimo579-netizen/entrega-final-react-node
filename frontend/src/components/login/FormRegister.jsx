@@ -17,6 +17,8 @@ export function FormRegister() {
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [address, setAddress] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
   const [isDocMenuOpen, setIsDocMenuOpen] = useState(false)
 
   function handleSubmit(event) {
@@ -48,14 +50,14 @@ export function FormRegister() {
             htmlFor="middle-name"
             className="text-sm font-medium text-foreground"
           >
-            Segundo nombre <span className="text-muted">(opcional)</span>
+            Segundo nombre
           </label>
           <input
             id="middle-name"
             type="text"
             value={middleName}
             onChange={(event) => setMiddleName(event.target.value)}
-            placeholder="Segundo nombre"
+            placeholder="Segundo nombre (opcional)"
             className="w-full rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-muted"
           />
         </div>
@@ -84,14 +86,14 @@ export function FormRegister() {
             htmlFor="second-last-name"
             className="text-sm font-medium text-foreground"
           >
-            Segundo apellido <span className="text-muted">(opcional)</span>
+            Segundo apellido
           </label>
           <input
             id="second-last-name"
             type="text"
             value={secondLastName}
             onChange={(event) => setSecondLastName(event.target.value)}
-            placeholder="Segundo apellido"
+            placeholder="Segundo apellido (opcional)"
             className="w-full rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-muted"
           />
         </div>
@@ -203,6 +205,42 @@ export function FormRegister() {
           placeholder="Dirección"
           className="w-full rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-muted"
         />
+      </div>
+
+      <div className="grid grid-cols-2 gap-3">
+        <div className="flex flex-col gap-1">
+          <label
+            htmlFor="register-password"
+            className="text-sm font-medium text-foreground"
+          >
+            Contraseña
+          </label>
+          <input
+            id="register-password"
+            type="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            placeholder="Contraseña"
+            className="w-full rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-muted"
+          />
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label
+            htmlFor="confirm-password"
+            className="text-sm font-medium text-foreground"
+          >
+            Confirmar contraseña
+          </label>
+          <input
+            id="confirm-password"
+            type="password"
+            value={confirmPassword}
+            onChange={(event) => setConfirmPassword(event.target.value)}
+            placeholder="Confirmar contraseña"
+            className="w-full rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-muted"
+          />
+        </div>
       </div>
 
       <button
