@@ -51,9 +51,9 @@ export function Navbar() {
             <span className="text-xs">Iniciar sesión</span>
           </Link>
 
-          <button
-            type="button"
-            className="flex cursor-pointer flex-col items-center gap-1 text-foreground hover:text-muted"
+          <Link
+            to="/catalog"
+            className="flex flex-col items-center gap-1 text-foreground hover:text-muted"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ export function Navbar() {
               />
             </svg>
             <span className="text-xs">Catálogo</span>
-          </button>
+          </Link>
 
           <button
             type="button"
