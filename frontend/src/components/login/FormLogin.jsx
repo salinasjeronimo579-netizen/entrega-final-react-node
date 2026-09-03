@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export function LoginForm() {
+export function FormLogin() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [keepLoggedIn, setKeepLoggedIn] = useState(false)
@@ -69,4 +69,4 @@ export function LoginForm() {
   )
 }
 
-export default LoginForm
+export default FormLogin
