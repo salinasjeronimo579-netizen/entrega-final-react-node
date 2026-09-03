@@ -3,14 +3,16 @@ import LayoutMain from '../../layout/LayoutMain.jsx'
 import CatalogToolbar from '../../components/catalog/CatalogToolbar.jsx'
 import BookGrid from '../../components/catalog/BookGrid.jsx'
 import Pagination from '../../components/catalog/Pagination.jsx'
+import BookDetailModal from '../../components/catalog/BookDetailModal.jsx'
 import { books } from '../../services/books.js'
 
-const BOOKS_PER_PAGE = 10
+const BOOKS_PER_PAGE = 8
 
 export function Catalog() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedGenre, setSelectedGenre] = useState('Todos')
   const [currentPage, setCurrentPage] = useState(1)
+  const [selectedBook, setSelectedBook] = useState(null)
 
   const genres = useMemo(
     () => ['Todos', ...new Set(books.map((book) => book.genre))],
@@ -51,7 +53,7 @@ export function Catalog() {
           onGenreChange={setSelectedGenre}
         />
 
-        <BookGrid books={paginatedBooks} />
+        <BookGrid books={paginatedBooks} onBookClick={setSelectedBook} />
 
         <Pagination
           currentPage={page}
@@ -59,6 +61,11 @@ export function Catalog() {
           onPageChange={setCurrentPage}
         />
       </section>
+
+      <BookDetailModal
+        book={selectedBook}
+        onClose={() => setSelectedBook(null)}
+      />
     </LayoutMain>
   )
 }

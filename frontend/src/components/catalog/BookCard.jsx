@@ -1,6 +1,9 @@
-export function BookCard({ book }) {
+export function BookCard({ book, onClick }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition-colors duration-200 hover:border-foreground">
+    <div
+      onClick={() => onClick(book)}
+      className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-border bg-surface transition-all duration-200 hover:border-foreground active:scale-[0.98]"
+    >
       <div className="overflow-hidden">
         <img
           src={book.image}

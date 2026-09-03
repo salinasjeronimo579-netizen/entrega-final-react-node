@@ -1,6 +1,6 @@
 import BookCard from './BookCard.jsx'
 
-export function BookGrid({ books }) {
+export function BookGrid({ books, onBookClick }) {
   if (books.length === 0) {
     return (
       <p className="py-12 text-center text-sm text-muted">
@@ -10,9 +10,9 @@ export function BookGrid({ books }) {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
       {books.map((book) => (
-        <BookCard key={book.id} book={book} />
+        <BookCard key={book.id} book={book} onClick={onBookClick} />
       ))}
     </div>
   )
