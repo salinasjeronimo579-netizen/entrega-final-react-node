@@ -22,7 +22,7 @@ export function eliminarUsuario(id){
 
 export function obtenerUsuarioNombre(nombre) {
     return ModelUsuario.findAll({
-        where: {nombre: nombre}
+        where: {primer_nombre: nombre}
     })
 }
 
