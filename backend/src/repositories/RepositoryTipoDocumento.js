@@ -1,7 +1,11 @@
 import { ModelTipoDocumento } from "../models/ModelTipoDocumento.js";
 
-export function agregarTipoDocumento(data) {
+export function crearTipoDocumento(data) {
     return ModelTipoDocumento.create(data)
+}
+
+export function obtenerTipoDocumento(data) {
+    return ModelTipoDocumento.findAll(data)
 }
 
 export function obtenerTipoDocumentoNombre(nombre) {

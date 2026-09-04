@@ -4,6 +4,10 @@ export function crearRol(data) {
     return ModelRol.create(data)
 }
 
+export function obtenerRol(data) {
+    return ModelRol.findAll(data)
+}
+
 export function obtenerRolNombre(nombre) {
     return ModelRol.findAll({
         where: {nombre_rol: nombre}
