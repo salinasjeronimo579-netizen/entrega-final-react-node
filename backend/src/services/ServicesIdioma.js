@@ -2,7 +2,7 @@ import { crearIdioma, obtenerIdioma, actualizarIdioma, eliminarIdioma, obtenerId
 
 export function registrarIdioma(data) {
     if (!data.nombre) {
-        return new Promise.reject(new Error("Campos incompletos..."))
+        return Promise.reject(new Error("Campos incompletos..."))
     }
     return crearIdioma(data)
 }
@@ -13,21 +13,21 @@ export function listarIdiomas(data) {
 
 export function modificarIdioma(data, id) {
     if(!id){
-        return new Promise.reject(new Error("Id vacio.."))
+        return Promise.reject(new Error("Id vacio.."))
     }
     return actualizarIdioma(data, id)
 }
 
 export function consultarIdiomaNombre(nombre) {
     if(!nombre){
-        return new Promise.reject(new Error("Campo incompleto..."))
+        return Promise.reject(new Error("Campo incompleto..."))
     }
     return obtenerIdiomaNombre(nombre)
 }
 
 export function borrarIdioma(id) {
     if(!id){
-        return new Promise.reject(new Error("Id vacio..."))
+        return Promise.reject(new Error("Id vacio..."))
     }
 
     return eliminarIdioma(id)

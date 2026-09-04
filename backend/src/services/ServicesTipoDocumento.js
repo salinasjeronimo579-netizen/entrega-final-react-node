@@ -2,7 +2,7 @@ import { crearTipoDocumento, obtenerTipoDocumento, actualizarTipoDocumento, elim
 
 export function registrarTipoDocumento(data) {
     if (!data.codigo || !data.nombre) {
-        return new Promise.reject(new Error("Campos incompletos..."))
+        return Promise.reject(new Error("Campos incompletos..."))
     }
     return crearTipoDocumento(data)
 }
@@ -13,21 +13,21 @@ export function listarTiposDocumento(data) {
 
 export function modificarTipoDocumento(data, id) {
     if(!id){
-        return new Promise.reject(new Error("Id vacio.."))
+        return Promise.reject(new Error("Id vacio.."))
     }
     return actualizarTipoDocumento(data, id)
 }
 
 export function consultarTipoDocumentoNombre(nombre) {
     if(!nombre){
-        return new Promise.reject(new Error("Campo incompleto..."))
+        return Promise.reject(new Error("Campo incompleto..."))
     }
     return obtenerTipoDocumentoNombre(nombre)
 }
 
 export function borrarTipoDocumento(id) {
     if(!id){
-        return new Promise.reject(new Error("Id vacio..."))
+        return Promise.reject(new Error("Id vacio..."))
     }
 
     return eliminarTipoDocumento(id)
