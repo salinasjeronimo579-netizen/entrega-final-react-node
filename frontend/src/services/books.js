@@ -5,6 +5,8 @@ export const books = [
     title: 'Cien años de soledad',
     author: 'Gabriel García Márquez',
     genre: 'Novela',
+    year: 1967,
+    pages: 496,
     synopsis:
       'Una crónica de siete generaciones de la familia Buendía en el pueblo imaginario de Macondo, donde la magia y la historia se entrelazan sin dejar de ser cotidianas.',
   },
@@ -14,6 +16,8 @@ export const books = [
     title: 'El amor en los tiempos del cólera',
     author: 'Gabriel García Márquez',
     genre: 'Novela',
+    year: 1985,
+    pages: 368,
     synopsis:
       'La historia de un amor que resiste el paso de las décadas, contada a través de la vida de Florentino Ariza y Fermina Daza en una ciudad caribeña.',
   },
@@ -23,6 +27,8 @@ export const books = [
     title: 'Rayuela',
     author: 'Julio Cortázar',
     genre: 'Novela',
+    year: 1963,
+    pages: 736,
     synopsis:
       'Una novela que puede leerse en distintos órdenes, siguiendo la búsqueda existencial de Horacio Oliveira entre París y Buenos Aires.',
   },
@@ -32,6 +38,8 @@ export const books = [
     title: 'Don Quijote de la Mancha',
     author: 'Miguel de Cervantes',
     genre: 'Novela',
+    year: 1605,
+    pages: 863,
     synopsis:
       'Las aventuras de un hidalgo que, obsesionado con las novelas de caballería, decide convertirse en caballero andante junto a su fiel escudero Sancho Panza.',
   },
@@ -41,6 +49,8 @@ export const books = [
     title: 'El principito',
     author: 'Antoine de Saint-Exupéry',
     genre: 'Infantil',
+    year: 1943,
+    pages: 96,
     synopsis:
       'Un aviador varado en el desierto conoce a un pequeño príncipe que viaja de planeta en planeta, dejando reflexiones sobre el amor, la amistad y la vida adulta.',
   },
@@ -50,6 +60,8 @@ export const books = [
     title: 'Alicia en el país de las maravillas',
     author: 'Lewis Carroll',
     genre: 'Infantil',
+    year: 1865,
+    pages: 200,
     synopsis:
       'Una niña sigue a un conejo blanco hasta un mundo absurdo lleno de personajes extraordinarios y lógicas propias.',
   },
@@ -59,6 +71,8 @@ export const books = [
     title: 'El Hobbit',
     author: 'J.R.R. Tolkien',
     genre: 'Fantasía',
+    year: 1937,
+    pages: 310,
     synopsis:
       'Bilbo Bolsón, un hobbit hogareño, se une a un grupo de enanos en una travesía para recuperar su tesoro de las garras de un dragón.',
   },
@@ -68,6 +82,8 @@ export const books = [
     title: 'El señor de los anillos',
     author: 'J.R.R. Tolkien',
     genre: 'Fantasía',
+    year: 1954,
+    pages: 1178,
     synopsis:
       'Una comunidad de razas libres emprende un viaje para destruir un anillo capaz de someter a toda la Tierra Media bajo un poder oscuro.',
   },
@@ -77,6 +93,8 @@ export const books = [
     title: 'Harry Potter y la piedra filosofal',
     author: 'J.K. Rowling',
     genre: 'Fantasía',
+    year: 1997,
+    pages: 223,
     synopsis:
       'Un niño descubre en su undécimo cumpleaños que es un mago y comienza su primer año en el Colegio Hogwarts de Magia.',
   },
@@ -86,6 +104,8 @@ export const books = [
     title: '1984',
     author: 'George Orwell',
     genre: 'Ciencia ficción',
+    year: 1949,
+    pages: 328,
     synopsis:
       'En un estado totalitario que vigila cada pensamiento de sus ciudadanos, un hombre se atreve a cuestionar la verdad impuesta por el Partido.',
   },
@@ -95,6 +115,8 @@ export const books = [
     title: 'Fahrenheit 451',
     author: 'Ray Bradbury',
     genre: 'Ciencia ficción',
+    year: 1953,
+    pages: 194,
     synopsis:
       'En una sociedad donde los libros están prohibidos y son quemados, un bombero encargado de destruirlos empieza a cuestionar su propio papel.',
   },
@@ -104,6 +126,8 @@ export const books = [
     title: 'Un mundo feliz',
     author: 'Aldous Huxley',
     genre: 'Ciencia ficción',
+    year: 1932,
+    pages: 288,
     synopsis:
       'Una sociedad futura organizada en castas y controlada mediante el placer y el condicionamiento, donde la individualidad es una amenaza.',
   },
@@ -113,6 +137,8 @@ export const books = [
     title: 'Drácula',
     author: 'Bram Stoker',
     genre: 'Terror',
+    year: 1897,
+    pages: 418,
     synopsis:
       'Un abogado inglés descubre el oscuro secreto de un noble transilvano mientras una serie de sucesos macabros se extiende hasta Londres.',
   },
@@ -122,6 +148,8 @@ export const books = [
     title: 'Frankenstein',
     author: 'Mary Shelley',
     genre: 'Terror',
+    year: 1818,
+    pages: 280,
     synopsis:
       'Un científico da vida a una criatura hecha de partes de cadáveres, desatando consecuencias que no puede controlar ni él ni su creación.',
   },
@@ -131,6 +159,8 @@ export const books = [
     title: 'Veinte poemas de amor y una canción desesperada',
     author: 'Pablo Neruda',
     genre: 'Poesía',
+    year: 1924,
+    pages: 96,
     synopsis:
       'Una colección de poemas que exploran el amor, el deseo y la melancolía con una voz íntima y apasionada.',
   },
@@ -140,6 +170,8 @@ export const books = [
     title: 'Hojas de hierba',
     author: 'Walt Whitman',
     genre: 'Poesía',
+    year: 1855,
+    pages: 138,
     synopsis:
       'Una celebración poética de la vida, la naturaleza y la democracia, escrita y reescrita a lo largo de toda una vida.',
   },
@@ -149,6 +181,8 @@ export const books = [
     title: 'Sapiens',
     author: 'Yuval Noah Harari',
     genre: 'Historia',
+    year: 2011,
+    pages: 443,
     synopsis:
       'Un recorrido por la historia de la humanidad, desde la aparición del Homo sapiens hasta las revoluciones cognitiva, agrícola y científica.',
   },
@@ -158,6 +192,8 @@ export const books = [
     title: 'Breve historia del tiempo',
     author: 'Stephen Hawking',
     genre: 'Historia',
+    year: 1988,
+    pages: 256,
     synopsis:
       'Una explicación accesible sobre el origen del universo, los agujeros negros y la naturaleza del tiempo y el espacio.',
   },

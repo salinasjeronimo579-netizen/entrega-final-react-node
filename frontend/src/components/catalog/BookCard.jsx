@@ -16,6 +16,9 @@ export function BookCard({ book, onClick }) {
           {book.title}
         </h3>
         <p className="text-xs text-muted">{book.author}</p>
+        <p className="text-[11px] text-muted">
+          {book.year} · {book.pages} págs.
+        </p>
         <span className="mt-1 w-fit rounded-full bg-background px-2 py-0.5 text-[11px] text-muted">
           {book.genre}
         </span>
