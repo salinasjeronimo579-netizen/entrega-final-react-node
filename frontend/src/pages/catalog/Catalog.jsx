@@ -4,11 +4,12 @@ import CatalogToolbar from '../../components/catalog/CatalogToolbar.jsx'
 import BookGrid from '../../components/catalog/BookGrid.jsx'
 import Pagination from '../../components/catalog/Pagination.jsx'
 import BookDetailModal from '../../components/catalog/BookDetailModal.jsx'
-import { books } from '../../services/books.js'
+import { useLibros } from '../../components/DataComponents/Books.jsx'
 
 const BOOKS_PER_PAGE = 8
 
 export function Catalog() {
+  const { books } = useLibros()
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedGenre, setSelectedGenre] = useState('Todos')
   const [currentPage, setCurrentPage] = useState(1)
@@ -16,7 +17,7 @@ export function Catalog() {
 
   const genres = useMemo(
     () => ['Todos', ...new Set(books.map((book) => book.genre))],
-    [],
+    [books],
   )
 
   const filteredBooks = useMemo(() => {
@@ -28,7 +29,7 @@ export function Catalog() {
         selectedGenre === 'Todos' || book.genre === selectedGenre
       return matchesSearch && matchesGenre
     })
-  }, [searchTerm, selectedGenre])
+  }, [books, searchTerm, selectedGenre])
 
   const totalPages = Math.max(
     1,

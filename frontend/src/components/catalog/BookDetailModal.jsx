@@ -55,6 +55,9 @@ export function BookDetailModal({ book, onClose }) {
               {book.title}
             </h2>
             <p className="text-sm text-muted">{book.author}</p>
+            <p className="text-xs text-muted">
+              {book.year} · {book.pages} págs.
+            </p>
             <p className="text-sm leading-relaxed text-foreground">
               {book.synopsis}
             </p>
