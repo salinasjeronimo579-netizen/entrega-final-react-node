@@ -1,25 +1,20 @@
 import { API_URL } from "./api.js"
 
-export function listarLibros() {
-  return fetch(`${API_URL}/libros`)
-  .then((res) => res.json())
+export function mapearLibro(libro) {
+  return {
+    id: libro.id_libro,
+    title: libro.titulo,
+    author: libro.autores?.map((autor) => `${autor.nombre} ${autor.apellido}`).join(', ') ?? '',
+    genre: libro.categorias?.[0]?.nombre ?? '',
+    year: libro.anio_publicacion,
+    pages: libro.num_paginas,
+    synopsis: libro.sinopsis,
+    image: libro.portada,
+  }
 }
 
-
-
-export const books = [
-
-  {
-    id: 18,
-    image: 'https://placehold.co/300x400?text=Libro+18',
-    title: 'Breve historia del tiempo',
-    author: 'Stephen Hawking',
-    genre: 'Historia',
-    year: 1988,
-    pages: 256,
-    synopsis:
-      'Una explicación accesible sobre el origen del universo, los agujeros negros y la naturaleza del tiempo y el espacio.',
-  },
-]
-
-export default books
+export function listarLibros() {
+  return fetch(`${API_URL}/libros`)
+    .then((res) => res.json())
+    .then((libros) => libros.map(mapearLibro))
+}
