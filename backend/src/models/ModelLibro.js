@@ -26,6 +26,10 @@ export const ModelLibro = conn.define("Libro", {
   sinopsis: {
     type: DataTypes.STRING(200),
     allowNull: true
+  },
+  portada: {
+    type: DataTypes.STRING(255),
+    allowNull: true
   }
 }, {
   tableName: "Libros",
