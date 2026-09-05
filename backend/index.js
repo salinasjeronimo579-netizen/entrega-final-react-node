@@ -1,11 +1,13 @@
 import { conn } from "./src/config/database.js";
 import express from 'express';
+import cors from 'cors';
 import "./src/models/index.js"
 import { router } from "./src/routes/Routes.js";
 
 
 const app = express()
 
+app.use(cors())
 app.use(express.json())
 app.use(router)
 
