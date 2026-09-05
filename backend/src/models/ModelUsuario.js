@@ -29,7 +29,7 @@ export const ModelUsuario = conn.define("Usuario", {
         allowNull: true
     },
     telefono: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
     },
     email: {
