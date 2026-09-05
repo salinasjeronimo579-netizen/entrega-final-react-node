@@ -3,7 +3,7 @@ import { SearchBar } from './SearchBar'
 
 export function Navbar() {
   return (
-    <nav className="w-full border-b border-border bg-surface">
+    <nav className="w-full border-b border-border bg-surface z-100">
       <div className="mx-auto flex max-w-7xl items-center gap-6 px-6 py-3">
         <div className="flex items-center gap-2">
           <svg
